@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="adashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" href="images\favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images\favicon.png" type="image/x-icon">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logos">
+            <img style="  width: 75px;
+        height: auto;" src="/images/towards.png" alt="">
+            <img style="padding-top: 25px; padding-left: 30px;   width: 105px;
+        height: 51.03px;" src="images\ptnew_header_logo.svg" alt="">
+            <img style="padding-top: 20px; padding-left: 30px;   width: 105px;
+        height: 60px;" src="/images/g20.png" alt="">
+        </div>
+        <div class="tabs">
+            <a href='/adashboard' data-item='Home'>Home</a>
+            <a href='/logout' data-item='Logout'>Logout</a>
+        </div>
+    </div>
+    <div class="dasboard_dropdown_export_section pt-4 pb-4 pl-5 pr-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-2 col-lg-1">
+                    <div style="display: none;" class="dashboard_homeicon_country_wrapper"><svg
+                            class="svg-inline--fa fa-house mr-2 dashboard_home_icon" aria-hidden="true"
+                            focusable="false" data-prefix="fas" data-icon="house" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z">
+                            </path>
+                        </svg><!-- <i class="fas fa-home mr-2 dashboard_home_icon"></i> Font Awesome fontawesome.com -->
+                        <p class="dashboard_label_text small_text mb-0" style="display: none;">India</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-4">
+                    <div class="form-group form-group dashboard_filter_dropdwn mb-0">
+                    <select class="form-control" id="sel1" name="selectdistrict" title="Please select District">
+                        <option value="0">Select District</option>
+                        <option value="Ahmednagar">Ahmednagar</option>
+                        <option value="Akola">Akola</option>
+                        <option value="Amravati">Amravati</option>
+                        <option value="Aurangabad">Aurangabad</option>
+                        <option value="Beed">Beed</option>
+                        <option value="Bhandara">Bhandara</option>
+                        <option value="Buldhana">Buldhana</option>
+                        <option value="Chandrapur">Chandrapur</option>
+                        <option value="Dhule">Dhule</option>
+                        <option value="Gadchiroli">Gadchiroli</option>
+                        <option value="Gondia">Gondia</option>
+                        <option value="Hingoli">Hingoli</option>
+                        <option value="Jalgaon">Jalgaon</option>
+                        <option value="Jalna">Jalna</option>
+                        <option value="Kolhapur">Kolhapur</option>
+                        <option value="Latur">Latur</option>
+                        <option value="Mumbai City">Mumbai City</option>
+                        <option value="Mumbai Suburban">Mumbai Suburban</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Nanded">Nanded</option>
+                        <option value="Nandurbar">Nandurbar</option>
+                        <option value="Nashik">Nashik</option>
+                        <option value="Osmanabad">Osmanabad</option>
+                        <option value="Palghar">Palghar</option>
+                        <option value="Parbhani">Parbhani</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Raigad">Raigad</option>
+                        <option value="Ratnagiri">Ratnagiri</option>
+                        <option value="Sangli">Sangli</option>
+                        <option value="Satara">Satara</option>
+                        <option value="Sindhudurg">Sindhudurg</option>
+                        <option value="Solapur">Solapur</option>
+                        <option value="Thane">Thane</option>
+                        <option value="Wardha">Wardha</option>
+                        <option value="Washim">Washim</option>
+                        <option value="Yavatmal">Yavatmal</option>
+                    </select>
+                </div>
+                </div>
+
+                <div class="col-sm-3 col-lg-3">
+                    <div class="form-group form-group dashboard_filter_dropdwn mb-0">
+                    <div class="dashboard_summary_drpdwn">
+                        <div class="form-group dashboard_filter_dropdwn mb-0">
+                            <button class="button" onclick="sendData()">Search</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div style="margin-left: 100px" class="col-sm-3 col-lg-3">
+                    <div class="form-group form-group dashboard_filter_dropdwn mb-0">
+                    <div class="dashboard_summary_drpdwn">
+                        <div class="form-group dashboard_filter_dropdwn mb-0">
+                            <button class="button" onclick="redirectToRoute()"> Total </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-4 pb-4 pl-5 pr-5">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12"></div>
+            <div class="col-sm-12 col-lg-12 mt-2">
+                <div class="ptnew_dash_register_orange_patch_count">
+                    <div class="last-updated-section">
+                        <h4 class="ptnew_dash_register_count_head"><span>Maharashtra</span></h4>
+                    </div>
+                    <div class="ptnew_dash_register_count_main_wrapper">
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= districtCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Districts</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= workersCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Anganwadi Workers</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= total %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Eligible Beneficiaries</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= pregnantWomenCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Pregnant Women</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= lactatingMothersCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Lactating Mothers</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= infantCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Children (6 months-3 years)</p>
+                        </div>
+                        <div class="ptnew_dash_register_count_inner_wrapper">
+                            <h3 class="ptnew_dash_register_count"><%= childrenCount %></h3>
+                            <p class="ptnew_dash_register_count_subhaed">Children (3-6 years)</p>
+                        </div>
+                    </div>
+                    <p class="ptnew_dash_register_count_subhaed mt-3">*The given data is related to Maharashtra state only.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12"></div>
+        </div>
+    </div>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-bottom">
+            <img style=" height: 100px;" src="images\poshan_abhiyan.svg" alt="">
+            <p class="copyright">Copyright@2023 Poshan Tracker. All rights reserved <br><br>
+                <span style="color:crimson; font-weight: bold;">Poshan Helpline : 14408</span>
+            </p>
+            <img style=" height: 100px;" src="images\ministry.svg" alt="">
+        </div>
+
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+   
+      function sendData() {
+        const inputData = $('#dataInput').val();
+    
+        $.ajax({
+          url: '/search',
+          method: 'POST',
+          data: { inputData: inputData },
+          success: function(response) {
+            console.log('Data sent successfully:', response);
+            // Handle success if needed
+          },
+          error: function(error) {
+            console.error('Error sending data:', error);
+            // Handle error if needed
+          }
+        });
+      }
+
+      function redirectToRoute() {
+    // Redirect to '/anotherRoute' - Replace with your desired route
+    window.location.href = '/adashboard';
+  }
+    </script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</html>
